@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Capstone Project - 7 Weeks</title>
   <style>
-    /* General Body Styling */
     body {
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       background-color: #f4f4f4;
@@ -15,49 +14,60 @@
     }
 
     /* Navbar Styling */
-    nav {
-      background-color: black;
-      padding: 15px 20px;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      z-index: 1000;
-      text-align: center;
-    }
+   /* Navbar should now appear under progress bar */
+nav {
+  background-color: black;
+  padding: 15px 20px;
+  position: fixed;
+  width: 100%;
+  top: 5px; /* Push down to avoid covering progress bar */
+  left: 0;
+  z-index: 1000;
+  text-align: center;
+}
 
     nav h1 {
-      color: orange; /* Orange text for navbar */
+      color: orange;
       font-size: 72px;
       margin: 0;
     }
 
-    /* Added styling for the new text under the title */
     nav p {
-      color: orange; /* Orange color for the subtitle */
+      color: orange;
       font-size: 18px;
       margin-top: 10px;
       font-weight: bold;
     }
 
-    /* Spacing for page content to avoid overlapping with navbar */
-    .content {
-      margin-top: 150px;
-    }
+   /* Progress Bar */
+#progress-bar {
+  position: fixed;
+  top: 0; /* Now at very top of page */
+  left: 0;
+  width: 0%;
+  height: 5px;
+  background-color: green;
+  z-index: 2000; /* Above everything */
+  transition: width 0.25s ease-out;
+}
 
-    /* Week Section Styling */
+
+.content {
+  margin-top: 160px; /* Increased slightly for visual spacing */
+}
+
     .week {
       background-color: #fff;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      margin: 20px auto; /* Center the week containers */
+      margin: 20px auto;
       padding: 20px;
-      width: 80%; /* Limit the width of the week containers */
-      text-align: center; /* Center the text inside each week */
+      width: 80%;
+      text-align: center;
     }
 
     .week h2 {
-      color: black; /* Change heading text color to black */
+      color: black;
       font-size: 28px;
       margin-bottom: 10px;
     }
@@ -66,33 +76,35 @@
       color: #555;
       font-size: 16px;
       line-height: 1.6;
-      display: none; /* Initially hidden */
+      display: none;
     }
 
     .week button {
-      background-color: black; /* Black background for the button */
+      background-color: black;
       color: white;
       border: none;
       padding: 10px 20px;
       font-size: 16px;
       cursor: pointer;
       border-radius: 5px;
-      margin-top: 10px; /* Add some space above the button */
+      margin-top: 10px;
     }
 
     .week button:hover {
-      background-color: #333; /* Darker shade of black for hover */
+      background-color: #333;
     }
-
   </style>
 </head>
 <body>
 
-  <!-- Navbar with centered text -->
+  <!-- Navbar -->
   <nav>
     <h1>My Tech Foundry Experience</h1>
-    <p>Memology Edition</p> <!-- Added subtitle text -->
+    <p>Memology Edition</p>
   </nav>
+
+  <!-- Progress Bar -->
+  <div id="progress-bar"></div>
 
   <!-- Page Content -->
   <div class="content">
@@ -147,14 +159,23 @@
   </div>
 
   <script>
+    // Toggle Description Function
     function toggleDescription(week) {
       var description = document.getElementById("week" + week);
       if (description.style.display === "none" || description.style.display === "") {
-        description.style.display = "block"; // Show description
+        description.style.display = "block";
       } else {
-        description.style.display = "none"; // Hide description
+        description.style.display = "none";
       }
     }
+
+    // Scroll Progress Bar Script
+    window.onscroll = function() {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById("progress-bar").style.width = scrolled + "%";
+    };
   </script>
 
 </body>
