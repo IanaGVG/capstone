@@ -31,7 +31,28 @@ body {
     margin-top: 10px;
     font-weight: bold;
   }
-  
+  /* Glitch hover effect for nav text */
+nav h1:hover,
+nav p:hover {
+  transition: all 0.2s ease;
+  color: #ff00c8;
+  text-shadow:
+    2px 0 #00ffe1,
+    -2px 0 #ff00c8,
+    0 2px #00ffe1,
+    0 -2px #ff00c8;
+  animation: glitch 0.3s infinite;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-1px, 1px); }
+  40% { transform: translate(1px, -1px); }
+  60% { transform: translate(-1px, -1px); }
+  80% { transform: translate(1px, 1px); }
+  100% { transform: translate(0); }
+}
+
   /* Progress Bar */
   #progress-bar {
     position: fixed;
