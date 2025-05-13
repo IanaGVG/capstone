@@ -29,6 +29,9 @@ nav h1 {
   color: orange;
   font-size: 72px;
   margin: 0;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide any overflowing text */
+  text-overflow: ellipsis; /* Add ellipsis if it overflows */
 }
 
 nav p {
@@ -182,12 +185,12 @@ nav p:hover {
 @media screen and (max-width: 768px) {
   nav {
     flex-direction: column;  /* Stack elements vertically on small screens */
-    text-align: left;        /* Align text to the left for mobile */
+    text-align: center;        /* Align text to the left for mobile */
     padding: 10px;           /* Reduce padding on small screens */
   }
 
   nav h1 {
-    font-size: 48px;         /* Smaller logo on mobile */
+    font-size: 30px;         /* Smaller logo on mobile */
   }
 
   nav p {
