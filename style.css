@@ -27,7 +27,7 @@ nav {
 
 nav h1 {
   color: orange;
-  font-size: 40px;
+  font-size: 50px;
   margin: 0;
   white-space: nowrap; /* Prevent text from wrapping */
   overflow: hidden; /* Hide any overflowing text */
@@ -190,10 +190,10 @@ nav p:hover {
   }
 
   nav h1 {
-    font-size: 20px;         /* Smaller logo on mobile */
+    font-size: 14px;         /* Smaller logo on mobile */
   }
 
   nav p {
-    font-size: 14px;         /* Smaller text for mobile */
+    font-size: 8px;         /* Smaller text for mobile */
   }
 }
