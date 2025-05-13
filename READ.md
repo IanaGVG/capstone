@@ -10,7 +10,7 @@ Welcome to my final capstone project for Tech Foundry — a retro, pixel-themed 
 
 ## 🌐 Live Demo
 [🔗 View Site](https://ianagvg.github.io/capstone/)  
-(Replace `yourusername` with your actual GitHub username)
+
 
 ## 🚀 Features
 - Pixel-font retro UI (`Press Start 2P`)
@@ -19,4 +19,13 @@ Welcome to my final capstone project for Tech Foundry — a retro, pixel-themed 
 - Toggle-able weekly reflections
 - Responsive design for desktop & mobile
 
-## 📁 Project Structure
+
+## 👩‍💻 Author
+**Iana!**  
+Made during Tech Foundry 2025 Capstone Project with laugh and tears 
+[GitHub](https://github.com/ianagvg)
+
+## 📄 License
+This project is open-source. Feel free to fork, modify, and retro-remix!
+
+
