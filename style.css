@@ -7,6 +7,7 @@ body {
   overflow-x: hidden;
 }
 
+/* Update the navbar styles for flexibility */
 nav {
   background-color: black;
   padding: 15px 20px;
@@ -15,8 +16,14 @@ nav {
   top: 0;
   left: 0;
   z-index: 1000;
-  text-align: center;
+  display: flex;
+  justify-content: center;  /* Center all elements horizontally */
+  align-items: center;      /* Center all elements vertically */
+  text-align: center;       /* Ensure text is centered */
+  flex-wrap: wrap;          /* Allow wrapping on small screens */
 }
+
+
 
 nav h1 {
   color: orange;
@@ -169,5 +176,21 @@ nav p:hover {
 
   .content {
       padding-top: 180px;
+  }
+}
+/* Responsive adjustments for mobile */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;  /* Stack elements vertically on small screens */
+    text-align: left;        /* Align text to the left for mobile */
+    padding: 10px;           /* Reduce padding on small screens */
+  }
+
+  nav h1 {
+    font-size: 48px;         /* Smaller logo on mobile */
+  }
+
+  nav p {
+    font-size: 14px;         /* Smaller text for mobile */
   }
 }
