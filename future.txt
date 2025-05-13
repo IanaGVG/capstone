@@ -1,0 +1,4 @@
+1. Better responsiviness 
+2. More interactivity
+3. Gif load time
+4. Retro music?
